@@ -1,0 +1,258 @@
+﻿
+@{
+    ViewBag.Title = "Info";
+}
+
+
+<div id="main" class="header">
+    <h3 id="info">Information</h3>
+    <div id="icons">
+        <img src="~/images/Expand_black.png" id="info_exp" class="icon" onclick="showinfo()"/>
+        <img src="~/images/Collapse_black.png" id="colsinfo" class="icon" onclick="hideinfo()"/>
+    </div>
+</div>
+<div id="infobox">
+    <div>
+        <div id="personal" class="header">
+            <h3 id="info" class="infoheadings">Personal details</h3>
+            <div id="icons">
+                <img src="~/images/Expand_black.png" id="perinfo_exp" class="icon" onclick="showperinfo()" />
+                <img src="~/images/Collapse_black.png" id="colsperinfo" class="icon" onclick="hideperinfo()" />
+            </div>
+        </div>
+        <table class="data_table" id="personaldata">
+            <tr>
+                <th>
+                    Name
+                </th>
+                <td>
+                    satyasrinivas
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Father name
+                </th>
+                <td>
+                    Durgaprasad
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Mother name
+                </th>
+                <td>
+                    bhuvaneswari
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Address
+                </th>
+                <td>
+                    Chimakurthy
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        <div id="contact" class="header">
+            <h3 id="info"  class="infoheadings">contact Information</h3>
+            <div id="icons">
+                <img src="~/images/Expand_black.png" id="continfo_exp" class="icon" onclick="showcontinfo()" />
+                <img src="~/images/Collapse_black.png" id="colscontinfo" class="icon" onclick="hidecontinfo()" />
+            </div>
+        </div>
+        <table class="data_table" id="contactdata">
+            <tr>
+                <th>
+                    Mobile
+                </th>
+                <td>
+                    9949663003
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Email
+                </th>
+                <td>
+                    satyasrinivas7654@gmail.com
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Company mail
+                </th>
+                <td>
+                    satyasrinivas@jaajitech.com
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Address
+                </th>
+                <td>
+                    Chimakurthy
+                </td>
+            </tr>
+
+        </table>
+    </div>
+    <div>
+        <div id="workdetails" class="header">
+            <h3 id="info"  class="infoheadings">Work Details</h3>
+            <div id="icons">
+                <img src="~/images/Expand_black.png" id="workinfo_exp" class="icon" onclick="showworkinfo()" />
+                <img src="~/images/Collapse_black.png" id="colsworkinfo" class="icon" onclick="hideworkinfo()" />
+            </div>
+        </div>
+        <table class="data_table" id="workdata">
+            <tr>
+                <th>
+                    Company
+                </th>
+                <td>
+                    jaajitechnologies
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Employee ID
+                </th>
+                <td>
+                   JTR0108
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    Role
+                </th>
+                <td>
+                    software developer
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Location
+                </th>
+                <td>
+                    Ongole
+                </td>
+            </tr>
+
+        </table>
+    </div>
+</div>
+
+
+
+<style>
+    .header {
+        margin-top: 10px;
+        width: 100%;
+        background-color: cyan;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #main {
+        height: 60px;
+    }
+
+    #info {
+        margin-top: 5px;
+    }
+
+    #icons {
+        margin-right: 5px;
+    }
+    .data_table
+    {
+        width:100%;
+        border:2px solid lightskyblue;
+        border-collapse:collapse;
+        height:150px;
+    }
+    td,th {
+        border: 2px solid lightskyblue;
+        padding-left:10px;
+        width:50%;
+
+    }
+    #infobox
+    {
+        display:none;
+    }
+    .icon{
+        display:none;
+    }
+    .data_table{
+        display:none;
+    }
+    .infoheadings{
+        font-size:20px;
+        font-weight:bold;      
+    }
+</style>
+
+<script>
+    window.onload = function showexp() {
+        $("#info_exp").show()
+        $("#perinfo_exp").show()
+        $("#continfo_exp").show()
+        $("#workinfo_exp").show()
+
+    };
+    showexp();
+    function showinfo() {
+        $("#infobox").show();
+        $("#info_exp").hide();
+        $("#colsinfo").show();
+    }
+    function hideinfo() {
+        $("#infobox").hide();
+        $("#info_exp").show();
+        $("#colsinfo").hide();
+    }
+    function showperinfo() {
+        $("#personaldata").show();
+        $("#perinfo_exp").hide();
+        $("#colsperinfo").show();
+    }
+    function hideperinfo() {
+        $("#personaldata").hide();
+        $("#perinfo_exp").show();
+        $("#colsperinfo").hide();
+    }
+    function showcontinfo() {
+        $("#contactdata").show();
+        $("#continfo_exp").hide();
+        $("#colscontinfo").show();
+    }
+    function hidecontinfo() {
+        $("#contactdata").hide();
+        $("#continfo_exp").show();
+        $("#colscontinfo").hide();
+    }
+    function showworkinfo() {
+        $("#workdata").show();
+        $("#workinfo_exp").hide();
+        $("#colsworkinfo").show();
+    }
+    function hideworkinfo() {
+        $("#workdata").hide();
+        $("#workinfo_exp").show();
+        $("#colsworkinfo").hide();
+    }
+</script>
+
+
+
+
+
+
